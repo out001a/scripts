@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+ALARM_SENDER=/usr/local/bas/util/alarm_sender
+RCPT_FILE=/usr/local/bas/monitor/conf/recipient
+
+alarm_rcpt=$(awk 'BEGIN{r="";}/^\s*[^;]/{r=r"<"$0">;";}END{print r;}' "$RCPT_FILE")
+alarm_subj="$2"
+alarm_body="$1"
+
+$ALARM_SENDER "$alarm_rcpt" "$alarm_subj" "$alarm_body"

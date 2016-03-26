@@ -1,0 +1,12 @@
+; name      alert-interval      signature
+nginx               0       nginx
+scrapy              1800    /usr/bin/scrapy
+redis               0       redis-server
+php_fpm             0       php-fpm
+beanstalkd          0       beanstalkd
+mysqld              0       /usr/local/mysql/bin/mysqld
+mongod              0       mongod
+revealerd           0       revealerd
+supervisord         0       supervisord
+organizerd          0       organizerd.py
+sphinx              0       searchd
