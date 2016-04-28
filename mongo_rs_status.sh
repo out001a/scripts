@@ -26,8 +26,8 @@ for s in ${status[@]}; do
     for v in ${m[@]}; do
         health=""
         export $v
-        if [[ "$health" -ne "" ]] && [[ "$health" -ne "1" ]]; then
-        #if [[ "$health" -ne "" ]]; then
+        if [[ "$health" != "" ]] && [[ "$health" != "1" ]]; then
+        #if [[ "$health" != "" ]]; then
             alert_msg="$name, $statusStr, $(date +"%Y-%m-%d %H:%M:%S")"
             $ALERT_PROGRAM "$alert_msg" "mongo异常"
             echo $alert_msg
